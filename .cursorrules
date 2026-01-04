@@ -1,0 +1,69 @@
+# Eternal Arena Development Workflow Rules
+
+## Development Day Workflow
+
+The project uses a day-by-day development workflow where each day's work is archived in `archives/dayX/` folders.
+
+### Key Commands
+
+When the user uses these natural language commands, execute the corresponding workflow:
+
+#### "What was my last day?" / "What is my last development day?"
+- Check the `archives/` directory for the highest numbered `dayX` folder
+- Report the last day number and optionally read the summary from `archives/dayX/dayX.md`
+
+#### "I am starting development day X" / "Starting day X" / "Start day X"
+1. Read `archives/day(X-1)/docs/specs/whats-next.md` if it exists
+2. Read `archives/day(X-1)/day(X-1).md` if it exists
+3. Present a concise summary:
+   - Where we left off (from previous day summary)
+   - Next steps (from whats-next.md)
+   - Current state of the project
+
+#### "I am finished with development day X" / "Finished with day X" / "End day X"
+Execute the following workflow:
+
+1. **Create archive folder**: Create `archives/dayX/` directory (if it doesn't exist)
+
+2. **Create day summary**: 
+   - Prompt the user for a one-paragraph summary of what was accomplished
+   - Create `archives/dayX/dayX.md` with the summary
+   - Format: Use "# Day X Summary - [Brief Title]" as header, then the paragraph
+
+3. **Copy project files**:
+   - Copy all files and directories from project root to `archives/dayX/`
+   - **Exclude**: `archives/` folder and its contents
+   - **Include**: All other files including `docs/`, `README.md`, source files, config files, etc.
+   - Maintain the directory structure
+
+4. **Export transcripts**:
+   - Note: Transcripts should be manually exported from Cursor's chat history for the day
+   - Create `archives/dayX/transcripts/` directory
+   - Inform the user that they need to export transcripts manually and place them in this folder
+   - The transcripts should be exported from all chats/sessions from that development day
+
+5. **Generate whats-next.md**:
+   - Read all `.md` files in `docs/specs/` directory
+   - Review the content to understand current state and what's been designed
+   - Create `archives/dayX/docs/specs/whats-next.md` with:
+     - A summary of what has been designed/documented so far
+     - Identification of next logical steps in development
+     - Recommendations for what to tackle next
+     - Any gaps or incomplete areas that need attention
+
+### File Structure Expectations
+
+- Project root: Active development files
+- `archives/dayX/`: Snapshot of project at end of day X
+- `archives/dayX/dayX.md`: Summary of day X accomplishments
+- `archives/dayX/docs/specs/whats-next.md`: Next steps planned for day X+1
+- `archives/dayX/transcripts/`: Chat transcripts from day X
+
+### Notes
+
+- Always preserve the `archives/` folder - never copy it or its contents during archive operations
+- When copying files, maintain relative paths and directory structure
+- The `whats-next.md` file should be forward-looking and actionable
+- Day numbers should be sequential integers starting from 1
+- When starting a new day, the user may provide the day number, or you can infer it from the last archived day + 1
+

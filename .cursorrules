@@ -51,6 +51,12 @@ Execute the following workflow:
      - Recommendations for what to tackle next
      - Any gaps or incomplete areas that need attention
 
+6. **Commit and push repository**:
+   - Stage all changes (including the new archive folder and files)
+   - Commit with a message like "Archive day X: [brief summary]"
+   - Push to the remote repository
+   - Inform the user if there are any uncommitted changes that should be reviewed first
+
 ### File Structure Expectations
 
 - Project root: Active development files

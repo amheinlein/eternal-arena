@@ -26,9 +26,12 @@ Execute the following workflow:
 1. **Create archive folder**: Create `archives/dayX/` directory (if it doesn't exist)
 
 2. **Create day summary**: 
-   - Prompt the user for a one-paragraph summary of what was accomplished
-   - Create `archives/dayX/dayX.md` with the summary
-   - Format: Use "# Day X Summary - [Brief Title]" as header, then the paragraph
+   - Generate a one paragraph summary for what was acoomplished this day
+   - Prompt the user for a summary of what was accomplished
+   - Create `archives/dayX/dayX.md` with the generated summary followed by the user's summary
+
+   - Format: Use "# Day X Summary - [Brief Title]" as header, then the generated summary paragraph
+     - Use # Day My Take - [Brief Title] as the second header followed by the user's summary
 
 3. **Copy project files**:
    - Copy all files and directories from project root to `archives/dayX/`

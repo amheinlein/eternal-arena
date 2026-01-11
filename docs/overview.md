@@ -16,7 +16,7 @@ Seven core skills define character capabilities: Attack (to-hit chance), Strengt
 
 ## Combat
 
-Players can battle standard enemies and bosses using skill-based combat mechanics influenced by Attack, Strength, Defense, and other skills. See [combat.md](combat.md) for battle flow, enemy mechanics, and combat calculations.
+Players can battle standard enemies and bosses using fully automated, skill-based combat mechanics. Combat is calculated instantly when initiated - players select an enemy, consume an action, and view the battle result. Combat effectiveness is influenced by Attack, Strength, Defense, and other skills. See [combat.md](combat.md) for battle flow, enemy mechanics, and combat calculations.
 
 ## Items & Equipment
 

@@ -1533,6 +1533,45 @@ const BattleScreen: React.FC = () => {
 8. **Performance**: Selective subscriptions and caching reduce unnecessary re-renders and file operations
 9. **Error Resilience**: Comprehensive error handling prevents crashes and provides user-friendly feedback
 
+## UX Principles: Placeholder and Feedback Policy
+
+Eternal Arena follows a strict policy of providing user feedback for all unimplemented features. This ensures users never experience silent failures and always understand the state of the application.
+
+### Policy Requirements
+
+**All unimplemented features must provide user feedback:**
+
+1. **Screens**: Create placeholder screens with:
+   - Clear screen title
+   - "Coming Soon" or similar messaging
+   - Navigation back to previous screen
+   - Consistent layout matching design docs
+
+2. **Buttons/Actions**: Show toast notifications when clicked:
+   - Use `showNotImplementedToast(featureName: string)` helper
+   - Message format: "This feature is not yet implemented"
+   - Toast appears for 3-5 seconds
+
+3. **Backlog Tracking**: All placeholders tracked in `/docs/placeholder-backlog.md`:
+   - Category (Screen, Action, Feature)
+   - Status (Placeholder, In Progress, Completed)
+   - Priority level
+   - Description and notes
+
+### Implementation
+
+- Toast notifications managed through `UIStore` with queue support
+- Placeholder screens follow consistent template
+- Backlog updated as features are implemented
+- No feature should fail silently - always provide feedback
+
+### Benefits
+
+- **User Experience**: Users always know what's happening
+- **Development Clarity**: Clear backlog of work to complete
+- **Testing**: Easy to identify what needs implementation
+- **Professional**: Shows active development, not broken features
+
 ## Future Considerations
 
 - **Event System**: Consider event bus for cross-cutting concerns (achievements, notifications, analytics)

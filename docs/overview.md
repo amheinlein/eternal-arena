@@ -38,3 +38,9 @@ When actions are exhausted, players receive persistent bonuses that carry over t
 
 React Native/TypeScript monorepo with layered architecture (Controller → Service → Repository) using ContextObject, Strategy, and Factory patterns. See [architecture.md](architecture.md) for detailed technical specifications, interfaces, and implementation patterns.
 
+## Development & Meta Features
+
+### Devlog
+
+A screen to view development day summaries (dayX.md files) from the archives, providing a chronological record of the project's development progress. This feature will display summaries from `archives/dayX/dayX.md` files, allowing users to browse the development history. *Note: This feature is planned but not yet implemented.*
+

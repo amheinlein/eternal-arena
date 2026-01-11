@@ -60,6 +60,10 @@ Display results when actions are exhausted and show persistent bonuses. Summariz
 
 Initialize a new run with persistent bonuses applied. Show starting conditions and apply bonuses. See [screens/run-start.md](screens/run-start.md) for run initialization.
 
+### Devlog Screen (Planned)
+
+View development day summaries from the archives. Browse chronological development history by displaying summaries from `archives/dayX/dayX.md` files. *Note: This feature is planned but not yet implemented.* See [placeholder-backlog.md](../placeholder-backlog.md) for status.
+
 ## Navigation Flow
 
 ```
@@ -72,6 +76,7 @@ Main Menu (Hub)
 ├── Inventory Screen
 ├── Stats Screen
 ├── Settings Screen
+├── Devlog Screen (Planned)
 └── Run End Screen → Run Start Screen → Main Menu
 ```
 

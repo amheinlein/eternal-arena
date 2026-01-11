@@ -32,6 +32,7 @@ This document tracks all placeholder screens, unimplemented actions, and feature
 | Settings | Placeholder | Low | Game settings and preferences | Navigation works, screen shows "Coming Soon" |
 | Run End | Placeholder | High | Display run results and persistent bonuses | Navigation works, screen is placeholder |
 | Run Start | Completed | High | Initialize new run | Fully functional, creates new game context |
+| Devlog | Not Started | Low | View development day summaries from archives | Planned feature to display dayX.md summaries, not yet created |
 
 ## Actions
 
